@@ -20,8 +20,9 @@ st.write("Upload an image of waste to identify its type and disposal method.")
 # Load Model
 # --------------------------------------------------
 
+import os
 model = tf.keras.models.load_model(
-r"C:\Users\user\OneDrive\Desktop\Waste_Classifier (2).keras"
+os.path.join(os.path.dirname(__file__), "Waste_Classifier.keras")
 )
 
 # --------------------------------------------------
